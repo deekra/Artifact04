@@ -3,9 +3,27 @@ function validateForm(){
  var letters = /^[A-Za-z]+$/;
  var validLastName=false;
  var errorMessages ="";
- 
+ var validEmail = false;
+ var validPassword = false;
+ var validPhone = false;
+ var numbers = /^[0-9]+$/;
   
-  if (FirstName==="null" || FirstName==="" || FirstName.length > 20)
-    errorMessages += "<p>The firstname is required and cannot be greater than 20 characters</p>";
+ 
+  var FirstName = document.getElementById("FirstName").value;
+  var validLastName = document.getElementById("LastName").value;
+
+  if (FirstName==="null" || FirstName==="" ||  FirstName.length > 20)
+    errorMessages += "<p>The First Name is required and cannot be greater than 20 characters</p>";
   else
    validFirstName = true;
+ 
+  if (LastName==="null" || LastName==="" || LastName.length > 50)
+    errorMessages += "<p>The Last Name is required and cannot be greater than 50 characters</p>";
+  else
+   validFirstName = true;
+ 
+ 
+ 
+ document.getElementById("errorMessages").innerHTML = errorMessages;
+ 
+ return (validFirstName);
