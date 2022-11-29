@@ -44,9 +44,12 @@ function validateForm(){
   else
    validLastname = true;
  
-  var atpos = userEmail.indexOf("@");
-  var dotpos = userEmail.lastIndexOf(".");
-  if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length)
+  var atpos = contactUs.Email.indexOf("@");
+  var dotpos = contactUs.Email.lastIndexOf(".");
+  if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=contactUs.Email.length)
+  errorMessages += "<p>Invalid email</p>";
+  else
+    return true;
   
   if (contactUs.Phone.value==="null"|| 
       contactUs.Phone.value==="" ||
@@ -88,6 +91,16 @@ else
     errorMessages += "<p>The City is required </p>";
   else
    validFirstName = true;
+ 
+ if (contactUs.City.value==="null"|| 
+      contactUs.City.value==="" || 
+      contactUs.City.value.length < 0)
+    errorMessages += "<p>The City is required </p>";
+  else
+   validFirstName = true;
+ 
+ 
+ 
  
  
  document.getElementById("errorMessages").innerHTML = errorMessages;
