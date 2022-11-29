@@ -12,7 +12,7 @@ function validateForm(){
   var FirstName = document.getElementById("FirstName").value;
   var validLastName = document.getElementById("LastName").value;
 
-  if (FirstName==="null" || FirstName==="" ||  FirstName.value.match(letters) ||  FirstName.length > 20)
+  if (FirstName==="null" || FirstName==="" ||  FirstName.value.match(letters) ||  FirstName.length > 20 ||  FirstName.length < 0)
     errorMessages += "<p>The First Name is required, only letters are accepted and cannot be greater than 20 characters</p>";
   else
    validFirstName = true;
