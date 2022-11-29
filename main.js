@@ -48,27 +48,43 @@ function validateForm(){
   var dotpos = userEmail.lastIndexOf(".");
   if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length)
   
-  if (isNaN(Phone) || Phone.length >15 || Phone===null || Phone==="" || Phone.value.match(numbers) )
+  if (contactUs.Phone.value==="null"|| 
+      contactUs.Phone.value==="" ||
+      contactUs.Phone.value.match(numbers) ||
+      contactUs.Phone.value.length > 15 ||  
+      contactUs.Phone.value.length < 0)
   For example errorMessages = "<p>Invalid phone number </p>";
 else
   return true;
  
-  if (Username==="null" || Username==="" ||  Username.length >12 ||  Username.length < 0)
+  if (contactUs.Username.value==="null"|| 
+      contactUs.Username.value==="" ||
+      contactUs.Username.value.match(numbers) ||
+      contactUs.Username.value.length > 12 ||  
+      contactUs.Username.value.length < 0)
     errorMessages += "<p>The Username is required and cannot be greater than 12 characters</p>";
   else
    validFirstName = true;
  
-  if (Password==="null" || Password==="" || Password.length > 7 || Password.length < 0)
+  if (contactUs.Password.value==="null"|| 
+      contactUs.Password.value==="" ||
+      contactUs.Password.value.match(numbers) ||
+      contactUs.Password.value.length > 7 ||  
+      contactUs.Password.value.length < 0)
     errorMessages += "<p>The Password is required and cannot be greater than 7 characters</p>";
   else
    validFirstName = true;
  
- if (Address==="null" ||  Address==="" || Address.length < 0)
+ if (contactUs.Address.value==="null"|| 
+      contactUs.Address.value==="" || 
+      contactUs.Address.value.length < 0)
     errorMessages += "<p>The Address is required </p>";
   else
    validFirstName = true;
  
- if (City==="null" || City==="" || City.length < 0)
+ if (contactUs.City.value==="null"|| 
+      contactUs.City.value==="" || 
+      contactUs.City.value.length < 0)
     errorMessages += "<p>The City is required </p>";
   else
    validFirstName = true;
@@ -76,6 +92,8 @@ else
  
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
+ return (validFirstname);
+ return (validLastname);
  return (validFirstname);
  return (validLastname);
 
