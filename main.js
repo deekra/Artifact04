@@ -4,9 +4,15 @@ function validateForm(){
  var validLastName=false;
  var errorMessages ="";
  var validEmail = false;
- var validPassword = false;
  var validPhone = false;
  var numbers = /^[0-9]+$/;
+ var validUsername = false;
+ var validPassword = false;
+ var validAddress = false;
+ var validCity = false;
+ var validState = false;
+ var validCountry = false;
+ var validZipCode = false;
   
  
   var FirstName = document.getElementById("FirstName").value;
