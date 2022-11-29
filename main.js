@@ -27,19 +27,26 @@ function validateForm(){
   var validCountry = document.getElementById("Country").value;
   var validZipcode = document.getElementById("Zipcode").value;
 
-  if (Firstname==="null" || Firstname==="" ||  Firstname.value.match(letters) ||  Firstname.length > 20 ||  Firstname.length < 0)
-    errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
+  if (contactUs.Firstname.value==="null"|| 
+      contactUs.Firstname.value==="" ||
+      contactUs.Firstname.value.match(letters) ||
+      contactUs.Firstname.value.length > 20 ||  
+      contactUs.Firstname.value.length < 0)
+      errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
   else
    validFirstName = true;
  
-  if (Lastname==="null" || Lastname==="" ||  LastName.value.match(letters) || Lastname.length > 50)
+  if (contactUs.Lastname.value==="null" ||
+      contactUs.Lasttname.value==="" ||
+      contactUs.Lastname.value.match(letters) || 
+      contactUs.Lastname.value.length > 50)
     errorMessages += "<p>The Last Name is required, only letters are accepted and it cannot be greater than 50 characters</p>";
   else
    validLastname = true;
  
- var atpos = userEmail.indexOf("@");
- var dotpos = userEmail.lastIndexOf(".");
- if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length)
+  var atpos = userEmail.indexOf("@");
+  var dotpos = userEmail.lastIndexOf(".");
+  if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length)
   
   if (isNaN(Phone) || Phone.length >15 || Phone===null || Phone==="" || Phone.value.match(numbers) )
   For example errorMessages = "<p>Invalid phone number </p>";
