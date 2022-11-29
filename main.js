@@ -92,21 +92,29 @@ else
   else
    validFirstName = true;
  
- if (contactUs.City.value==="null"|| 
-      contactUs.City.value==="" || 
-      contactUs.City.value.length < 0)
-    errorMessages += "<p>The City is required </p>";
+ if (contactUs.State.value==="null"|| 
+      contactUs.State.value==="" || 
+      contactUs.State.value.length < 0)
+    errorMessages += "<p>The State is required </p>";
   else
    validFirstName = true;
  
- 
- 
- 
- 
+ if (contactUs.Country.value==="USA")
+   valid
+  else
+   validFirstName = false;
+   errorMessages += "<p>The State is required </p>";
+
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
  return (validFirstname);
  return (validLastname);
- return (validFirstname);
- return (validLastname);
-
+ return (validEmail);
+ return (validPhone);
+ return (validUsername);
+ return (validPassword);
+ return (validAddress);
+ return (validCity);
+ return (validState);
+ return (validCountry);
+ return (validZipcode);
