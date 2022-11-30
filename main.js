@@ -1,4 +1,6 @@
- var validFirstname = false;
+ 
+ function validateFirstname(){
+var validFirstname = false;
  var letters = /^[A-Za-z]+$/;
  var validLastname = false;
  var errorMessages ="";
@@ -210,4 +212,16 @@ function validateZipcode()
 }
   
  document.getElementById("errorMessages").innerHTML = errorMessages;
+ return (validFirstname);
+ return (validLastname);
+ return (validEmail);
+  return (validPhone);
+  return (validUsername);
+ return (validPassword);
+  return (validAddress);
+ return (validCity);
+  return (validState);
+ return (validCountry);
+  return (validZipcode);
+}
  
