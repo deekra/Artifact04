@@ -124,26 +124,35 @@
    return (validPassword);
   }
 }
+
+ function validateAddress()
+{
+   var validAddress = document.getElementById("Address").value;
+   if (contactUs.Address.value==="null"|| 
+      contactUs.Address.value==="" || 
+      contactUs.Address.value.length < 0)
+  {
+   errorMessages += "<p>The Address is required </p>";
+    return false;
+  }
+  else
+  {
+   validAddress = true;
+   return (validAddress);
+  }
+}
   
   
   
 
   
   
-  var validAddress = document.getElementById("Address").value;
+ 
   var validCity = document.getElementById("City").value;
   var validState = document.getElementById("State").value;
   var validCountry = document.getElementById("Country").value;
   var validZipcode = document.getElementById("Zipcode").value;
  
- 
- 
- if (contactUs.Address.value==="null"|| 
-      contactUs.Address.value==="" || 
-      contactUs.Address.value.length < 0)
-    errorMessages += "<p>The Address is required </p>";
-  else
-   validFirstName = true;
  
  if (contactUs.City.value==="null"|| 
       contactUs.City.value==="" || 
@@ -167,9 +176,7 @@
 
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
- return (validUsername);
- return (validPassword);
- return (validAddress);
+
  return (validCity);
  return (validState);
  return (validCountry);
