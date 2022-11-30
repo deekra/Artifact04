@@ -184,13 +184,13 @@ function validateCountry()
       contactUs.Address.value==="" || 
       contactUs.Address.value.length < 0)
   {
-   errorMessages += "<p>The Address is required </p>";
-    return false;
+  
+    return true;
   }
   else
   {
-   validAddress = true;
-   return (validAddress);
+   errorMessages += "<p>The Address is required </p>";
+   return (validCountry);
   }
 }
   
@@ -199,21 +199,16 @@ function validateZipcode()
    var validZipcode = document.getElementById("Zipcode").value;
    if (contactUs.Country.value==="USA")
   {
-    errorMessages += "<p>The State is required </p>";
+    errorMessages += "<p>The Zipcode is required if your country is USA and it cannot be greater than 5 digits </p>";
     return false;
   }
   else
   {
-   validAddress = true;
-   return (validAddress);
+   validZipcode = true;
+   return (validZipcode);
   }
 }
   
  
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
-
- return (validCity);
- return (validState);
- return (validCountry);
- return (validZipcode);
