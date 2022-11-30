@@ -25,6 +25,7 @@ var validFirstname = false;
       contactUs.Firstname.value.length > 20 ||  
       contactUs.Firstname.value.length < 0)
   {
+   alert( "The First Name is required, only letters are accepted and it cannot be greater than 20 characters." )
     errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
     return false;
   }
