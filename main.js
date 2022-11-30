@@ -106,30 +106,36 @@
   }
 }
   
- 
+ function validatePassword()
+{
+   var validPassword = document.getElementById("Password").value;
+   if (contactUs.Password.value==="null"|| 
+      contactUs.Password.value==="" ||
+      contactUs.Password.value.match(numbers) ||
+      contactUs.Password.value.length > 7 ||  
+      contactUs.Password.value.length < 0)
+  {
+    errorMessages += "<p>The Password is required and cannot be greater than 7 characters</p>";
+    return false;
+  }
+  else
+  {
+   validPassword = true;
+   return (validPassword);
+  }
+}
   
   
   
 
   
-  var validPassword = document.getElementById("Password").value;
+  
   var validAddress = document.getElementById("Address").value;
   var validCity = document.getElementById("City").value;
   var validState = document.getElementById("State").value;
   var validCountry = document.getElementById("Country").value;
   var validZipcode = document.getElementById("Zipcode").value;
  
- 
- 
- 
-  if (contactUs.Password.value==="null"|| 
-      contactUs.Password.value==="" ||
-      contactUs.Password.value.match(numbers) ||
-      contactUs.Password.value.length > 7 ||  
-      contactUs.Password.value.length < 0)
-    errorMessages += "<p>The Password is required and cannot be greater than 7 characters</p>";
-  else
-   validFirstName = true;
  
  
  if (contactUs.Address.value==="null"|| 
