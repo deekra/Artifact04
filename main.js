@@ -209,6 +209,5 @@ function validateZipcode()
   }
 }
   
- 
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
