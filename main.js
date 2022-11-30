@@ -31,10 +31,29 @@ function validateForm(){
     return true;
   }
 }
+ 
+ function validateLastname()
+{
+  var validLastname = document.getElementById("Lastname").value;
+  if (contactUs.Firstname.value==="null"|| 
+      contactUs.Firstname.value==="" ||
+      contactUs.Firstname.value.match(letters) ||
+      contactUs.Firstname.value.length > 20 ||  
+      contactUs.Firstname.value.length < 0)
+  {
+    errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
+    return false;
+  }
+  else
+  {
+   validFirstName = true;
+   return (validFirstname);
+  }
+}
   
  
-  var Firstname = document.getElementById("Firstname").value;
-  var validLastname = document.getElementById("Lastname").value;
+  
+  
   var validEmail = document.getElementById("Email").value;
   var validPhone = document.getElementById("Phone").value;
   var validUsername = document.getElementById("Username").value;
@@ -52,7 +71,8 @@ function validateForm(){
       contactUs.Firstname.value.length < 0)
       errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
   else
-   validFirstName = true;
+  return (validFirstname);
+ 
  
   if (contactUs.Lastname.value==="null" ||
       contactUs.Lasttname.value==="" ||
@@ -60,7 +80,8 @@ function validateForm(){
       contactUs.Lastname.value.length > 50)
     errorMessages += "<p>The Last Name is required, only letters are accepted and it cannot be greater than 50 characters</p>";
   else
-   validLastname = true;
+   else
+  return true;
  
   var atpos = contactUs.Email.indexOf("@");
   var dotpos = contactUs.Email.lastIndexOf(".");
@@ -95,6 +116,7 @@ else
     errorMessages += "<p>The Password is required and cannot be greater than 7 characters</p>";
   else
    validFirstName = true;
+ 
  
  if (contactUs.Address.value==="null"|| 
       contactUs.Address.value==="" || 
