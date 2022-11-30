@@ -13,6 +13,24 @@ function validateForm(){
  var validState = false;
  var validCountry = false;
  var validZipcode = false;
+ 
+ function validateFirstname()
+{
+  var Firstname = document.getElementById("Firstname").value;
+  if (contactUs.Firstname.value==="null"|| 
+      contactUs.Firstname.value==="" ||
+      contactUs.Firstname.value.match(letters) ||
+      contactUs.Firstname.value.length > 20 ||  
+      contactUs.Firstname.value.length < 0)
+  {
+    errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+}
   
  
   var Firstname = document.getElementById("Firstname").value;
