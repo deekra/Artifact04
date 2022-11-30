@@ -13,29 +13,26 @@ var validFirstname = false;
  var validState = false;
  var validCountry = false;
  var validZipcode = false;
- 
- function validateFirstname()
-{
+
+    function validateFirstname() {
   var Firstname = document.getElementById("Firstname").value;
   console.log(validFirstname);
   if (contactUs.Firstname.value==="null"|| 
       contactUs.Firstname.value==="" ||
       contactUs.Firstname.value.match(letters) ||
-      contactUs.Firstname.value.length > 20 ||  
-      contactUs.Firstname.value.length < 0)
+      contactUs.Firstname.value.length > 20 || contactUs.Firstname.value.length < 0)
   {
-   alert( "The First Name is required, only letters are accepted and it cannot be greater than 20 characters." )
+   alert( "The First Name is required, only letters are accepted and it cannot be greater than 20 characters." );
     errorMessages += "<p>The First Name is required, only letters are accepted and it cannot be greater than 20 characters</p>";
-    return false;
   }
-  else
+     else
   {
-   validFirstName = true;
+    validFirstname = true;
   }
+  return (validFirstname);      
 }
  
- function validateLastname()
-{
+ function validateLastname() {
   var validLastname = document.getElementById("Lastname").value;
     console.log(validLastname);
      if (contactUs.Lastname.value==="null" ||
@@ -43,18 +40,17 @@ var validFirstname = false;
       contactUs.Lastname.value.match(letters) || 
       contactUs.Lastname.value.length > 50)
   {
-   sfm_show_error_msg ("The Last Name is required, only letters are accepted and it cannot be greater than 50 characters.")
+   sfm_show_error_msg ("The Last Name is required, only letters are accepted and it cannot be greater than 50 characters.");
     errorMessages += "<p>The Last Name is required, only letters are accepted and it cannot be greater than 50 characters</p>";
-    return false;
   }
   else
   {
    validLastName = true;
   }
+  return(validLastName);
 }
  
  function validateEmail()
- console.log(validEmail);
 {
    var validEmail = document.getElementById("Email").value;
   var atpos = contactUs.Email.indexOf("@");
@@ -63,14 +59,14 @@ var validFirstname = false;
   if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=contactUs.Email.length)
   {
     errorMessages += "<p>Invalid email</p>";
-    return false;
   }
   else
   {
    validEmail = true;
   }
+  return(validEmail);
 }
-  
+    
   function validatePhone()
 {
   var validPhone = document.getElementById("Phone").value;
@@ -82,12 +78,12 @@ var validFirstname = false;
       contactUs.Phone.value.length < 0)
   {
     errorMessages = "<p>Invalid phone number </p>";
-    return false;
   }
   else
   {
    validPhone = true;
   }
+   return(validPhone);
 }
 
  function validateUsername()
@@ -101,12 +97,12 @@ var validFirstname = false;
       contactUs.Username.value.length < 0)
   {
     errorMessages += "<p>The Username is required and cannot be greater than 12 characters</p>";
-    return false;
   }
   else
   {
    validUsername = true;
   }
+   return(validUsername);
 }
   
  function validatePassword()
@@ -120,12 +116,12 @@ var validFirstname = false;
       contactUs.Password.value.length < 0)
   {
     errorMessages += "<p>The Password is required and cannot be greater than 7 characters</p>";
-    return false;
   }
   else
   {
    validPassword = true;
   }
+  return(validPassword);
 }
 
  function validateAddress()
@@ -137,12 +133,12 @@ var validFirstname = false;
       contactUs.Address.value.length < 0)
   {
    errorMessages += "<p>The Address is required </p>";
-    return false;
   }
   else
   {
    validAddress = true;
   }
+  return(validAddress);
 }
 
 function validateCity()
@@ -154,12 +150,12 @@ function validateCity()
       contactUs.City.value.length < 0)
   {
     errorMessages += "<p>The City is required </p>";
-    return false;
   }
   else
   {
    validCity = true;
   }
+  return(validCity);
 }
   
 
@@ -172,12 +168,12 @@ function validateState()
       contactUs.State.value.length < 0)
   {
    errorMessages += "<p>The State is required </p>";
-    return false;
   }
   else
   {
    validState = true;
   }
+   return(validState);
 }
   
 function validateCountry()
@@ -188,11 +184,12 @@ function validateCountry()
       contactUs.Country.value.length < 0)
   {
     errorMessages += "<p>The Country is required </p>";
-    return false;
   }
   else
   {
    validAddress = true;
+  }
+  return(validAddress);
 }
   
 function validateZipcode()
@@ -200,17 +197,17 @@ function validateZipcode()
    var validZipcode = document.getElementById("Zipcode").value;
    console.log(validZipcode);
   
-   if contactUs.Country.value==="USA"||
+   if (contactUs.Country.value==="USA"||
       contactUs.Address.value.length > 0||
       contactUs.Address.value.length < 5)
       {
     errorMessages += "<p>The Zipcode is required if your country is USA and it cannot be greater than 5 digits </p>";
-    return false;
   }
   else
   {
    validZipcode = true;
   }
+  return(validZipcode);
 }
   
  document.getElementById("errorMessages").innerHTML = errorMessages;
