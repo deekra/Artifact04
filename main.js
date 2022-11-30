@@ -36,7 +36,7 @@
 {
   var validLastname = document.getElementById("Lastname").value;
   if  if (contactUs.Lastname.value==="null" ||
-      contactUs.Lasttname.value==="" ||
+      contactUs.Lastname.value==="" ||
       contactUs.Lastname.value.match(letters) || 
       contactUs.Lastname.value.length > 50)
   {
@@ -52,6 +52,7 @@
  
  function validateEmail()
 {
+   var validEmail = document.getElementById("Email").value;
   var atpos = contactUs.Email.indexOf("@");
   var dotpos = contactUs.Email.lastIndexOf(".");
   var validEmail = document.getElementById("Email").value;
@@ -69,6 +70,7 @@
   
   function validatePhone()
 {
+  var validPhone = document.getElementById("Phone").value;
    if (contactUs.Phone.value==="null"|| 
       contactUs.Phone.value==="" ||
       contactUs.Phone.value.match(numbers) ||
@@ -84,13 +86,32 @@
    return (validPhone);
   }
 }
+
+ function validateUsername()
+{
+   var validUsername = document.getElementById("Username").value;
+   if (contactUs.Username.value==="null"|| 
+      contactUs.Username.value==="" ||
+      contactUs.Username.value.match(numbers) ||
+      contactUs.Username.value.length > 12 ||  
+      contactUs.Username.value.length < 0)
+  {
+    errorMessages += "<p>The Username is required and cannot be greater than 12 characters</p>";
+    return false;
+  }
+  else
+  {
+   validUsername = true;
+   return (validUsername);
+  }
+}
   
  
   
   
   
 
-  var validUsername = document.getElementById("Username").value;
+  
   var validPassword = document.getElementById("Password").value;
   var validAddress = document.getElementById("Address").value;
   var validCity = document.getElementById("City").value;
@@ -99,14 +120,7 @@
   var validZipcode = document.getElementById("Zipcode").value;
  
  
-  if (contactUs.Username.value==="null"|| 
-      contactUs.Username.value==="" ||
-      contactUs.Username.value.match(numbers) ||
-      contactUs.Username.value.length > 12 ||  
-      contactUs.Username.value.length < 0)
-    errorMessages += "<p>The Username is required and cannot be greater than 12 characters</p>";
-  else
-   validFirstName = true;
+ 
  
   if (contactUs.Password.value==="null"|| 
       contactUs.Password.value==="" ||
