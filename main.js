@@ -44,6 +44,7 @@ var validFirstname = false;
       contactUs.Lastname.value.match(letters) || 
       contactUs.Lastname.value.length > 50)
   {
+   sfm_show_error_msg (The Last Name is required, only letters are accepted and it cannot be greater than 50 characters.)
     errorMessages += "<p>The Last Name is required, only letters are accepted and it cannot be greater than 50 characters</p>";
     return false;
   }
