@@ -29,7 +29,8 @@ var validFirstname = false;
   {
     validFirstname = true;
   }
-  return (validFirstname);      
+        document.getElementById("errorMessages").innerHTML = errorMessages;
+  return (validFirstname);
 }
  
  function validateLastname() {
@@ -47,7 +48,8 @@ var validFirstname = false;
   {
    validLastName = true;
   }
-  return(validLastName);
+     document.getElementById("errorMessages").innerHTML = errorMessages;
+  return(validFirstname && validLastname);
 }
  
  function validateEmail()
