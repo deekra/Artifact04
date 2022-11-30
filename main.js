@@ -32,6 +32,7 @@ var validFirstname = false;
   {
    validFirstName = true;
   }
+  return (validFirstname);
 }
  
  function validateLastname()
@@ -51,6 +52,7 @@ var validFirstname = false;
   {
    validLastName = true;
   }
+  return (validLastName);
 }
  
  function validateEmail()
@@ -69,6 +71,7 @@ var validFirstname = false;
   {
    validEmail = true;
   }
+ return(validEmail);
 }
   
   function validatePhone()
@@ -88,6 +91,7 @@ var validFirstname = false;
   {
    validPhone = true;
   }
+ return(validPhone);
 }
 
  function validateUsername()
@@ -107,6 +111,7 @@ var validFirstname = false;
   {
    validUsername = true;
   }
+  return(validUsername);
 }
   
  function validatePassword()
@@ -126,6 +131,7 @@ var validFirstname = false;
   {
    validPassword = true;
   }
+ return(validPassword);
 }
 
  function validateAddress()
@@ -143,6 +149,7 @@ var validFirstname = false;
   {
    validAddress = true;
   }
+  return(validAddress);
 }
 
 function validateCity()
@@ -160,6 +167,7 @@ function validateCity()
   {
    validCity = true;
   }
+   return(validCity);
 }
   
 
@@ -178,6 +186,7 @@ function validateState()
   {
    validState = true;
   }
+  return(validState);
 }
   
 function validateCountry()
@@ -193,6 +202,8 @@ function validateCountry()
   else
   {
    validAddress = true;
+  }
+  return(validAddress);
 }
   
 function validateZipcode()
@@ -211,6 +222,7 @@ function validateZipcode()
   {
    validZipcode = true;
   }
+  return( validZipcode);
 }
   
  document.getElementById("errorMessages").innerHTML = errorMessages;
