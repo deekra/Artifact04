@@ -1,5 +1,4 @@
- 
- function validateFirstname(){
+function validateForm(){
 var validFirstname = false;
  var letters = /^[A-Za-z]+$/;
  var validLastname = false;
