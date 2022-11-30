@@ -142,30 +142,30 @@
   }
 }
 
-function validateAddress()
+function validateCity()
 {
-   var validAddress = document.getElementById("Address").value;
-   if (contactUs.Address.value==="null"|| 
-      contactUs.Address.value==="" || 
-      contactUs.Address.value.length < 0)
+   var validCity = document.getElementById("City").value;
+   if (contactUs.City.value==="null"|| 
+      contactUs.City.value==="" || 
+      contactUs.City.value.length < 0)
   {
-   errorMessages += "<p>The Address is required </p>";
+    errorMessages += "<p>The City is required </p>";
     return false;
   }
   else
   {
-   validAddress = true;
-   return (validAddress);
+   validCity = true;
+   return (validCity);
   }
 }
   
 
-function validateAddress()
+function validateState()
 {
-   var validAddress = document.getElementById("Address").value;
-   if (contactUs.Address.value==="null"|| 
-      contactUs.Address.value==="" || 
-      contactUs.Address.value.length < 0)
+   var validState = document.getElementById("State").value;
+  if (contactUs.State.value==="null"|| 
+      contactUs.State.value==="" || 
+      contactUs.State.value.length < 0)
   {
    errorMessages += "<p>The Address is required </p>";
     return false;
@@ -177,9 +177,9 @@ function validateAddress()
   }
 }
   
-function validateAddress()
+function validateCountry()
 {
-   var validAddress = document.getElementById("Address").value;
+   var validCountry = document.getElementById("Country").value;
    if (contactUs.Address.value==="null"|| 
       contactUs.Address.value==="" || 
       contactUs.Address.value.length < 0)
@@ -209,39 +209,7 @@ function validateZipcode()
   }
 }
   
-  
-  
-  
-
-  
-  
  
-  var validCity = document.getElementById("City").value;
-  var validState = document.getElementById("State").value;
-  var validCountry = document.getElementById("Country").value;
-  
- 
- 
- if (contactUs.City.value==="null"|| 
-      contactUs.City.value==="" || 
-      contactUs.City.value.length < 0)
-    errorMessages += "<p>The City is required </p>";
-  else
-   validFirstName = true;
- 
- if (contactUs.State.value==="null"|| 
-      contactUs.State.value==="" || 
-      contactUs.State.value.length < 0)
-    errorMessages += "<p>The State is required </p>";
-  else
-   validFirstName = true;
- 
- if (contactUs.Country.value==="USA")
-   valid
-  else
-   validFirstName = false;
-   errorMessages += "<p>The State is required </p>";
-
  document.getElementById("errorMessages").innerHTML = errorMessages;
  
 
