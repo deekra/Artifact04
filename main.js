@@ -167,37 +167,37 @@ function validateState()
       contactUs.State.value==="" || 
       contactUs.State.value.length < 0)
   {
-   errorMessages += "<p>The Address is required </p>";
+   errorMessages += "<p>The State is required </p>";
     return false;
   }
   else
   {
-   validAddress = true;
-   return (validAddress);
+   validState = true;
+   return (validState);
   }
 }
   
 function validateCountry()
 {
    var validCountry = document.getElementById("Country").value;
-   if (contactUs.Address.value==="null"|| 
-      contactUs.Address.value==="" || 
-      contactUs.Address.value.length < 0)
+   if (contactUs.Country.value==="null"|| 
+      contactUs.Country.value.length < 0)
   {
-  
-    return true;
+    errorMessages += "<p>The Country is required </p>";
+    return false;
   }
   else
   {
-   errorMessages += "<p>The Address is required </p>";
+   validAddress = true;
    return (validCountry);
-  }
 }
   
 function validateZipcode()
 {
    var validZipcode = document.getElementById("Zipcode").value;
-   if (contactUs.Country.value==="USA")
+   if (contactUs.Country.value==="USA"||
+      contactUs.Address.value.length < 0||
+      contactUs.Address.value.length > 5)
   {
     errorMessages += "<p>The Zipcode is required if your country is USA and it cannot be greater than 5 digits </p>";
     return false;
