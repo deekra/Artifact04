@@ -78,8 +78,19 @@ function validateForm(){
     validPassword = true;
   } 
  
+  var Address = document.getElementById("address").value;
+  if (Address === "null" ||
+      Address === "") {
+    
+    errorMessages = errorMessages +  "<p> Address is required.</p>";
+  
+  }
+  else {
+    validAddress = true;
+  } 
+ 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername && validPassword);
+ return (validFirstname && validLastname && validPhone && validUsername && validPassword && validAddress);
 
 }
