@@ -53,8 +53,21 @@ function validateForm(){
   else {
     validPhone = true;
   } 
+ 
+  var Username = document.getElementById("username").value;
+  if (Username === "null" ||
+      Username === "" ||
+      Username.length > 12) {
+    
+    errorMessages = errorMessages +  "<p> Username is required and cannot be greater than 12 characters.</p>";
+  
+  }
+  else {
+    validUsername = true;
+  } 
+ 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone);
+ return (validFirstname && validLastname && validPhone && validUsername);
 
 }
