@@ -66,8 +66,20 @@ function validateForm(){
     validUsername = true;
   } 
  
+   var Password = document.getElementById("password").value;
+  if (Password === "null" ||
+      Password === "" ||
+      Password.length > 7) {
+    
+    errorMessages = errorMessages +  "<p> Password is required and cannot be greater than 7 characters.</p>";
+  
+  }
+  else {
+    validPassword = true;
+  } 
+ 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername);
+ return (validFirstname && validLastname && validPhone && validUsername && validPassword);
 
 }
