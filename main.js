@@ -78,19 +78,19 @@ function validateForm(){
     validPassword = true;
   } 
  
-  var City = document.getElementById("city").value;
-  if (City === "null" ||
-      City === "") {
+ var State = document.getElementById("state").value;
+  if (State === "null" ||
+      State === "") {
     
-    errorMessages = errorMessages +  "<p> City is required.</p>";
+    errorMessages = errorMessages +  "<p> State is required.</p>";
   
   }
   else {
-    validCity = true;
+    validState = true;
   } 
  
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername && validPassword && validCity);
+ return (validFirstname && validLastname && validPhone && validUsername && validPassword && validState);
 
 }
