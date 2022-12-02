@@ -22,7 +22,7 @@ function validateForm(){
       !Firstname.match(letters) ||
       Firstname.length > 20) 
   {
-    errorMessages = errorMessages + "<p> First Name is required and cannot be greater than 20 characters.</p>";
+    errorMessages = errorMessages + "<p> First Name is required, only letters are allowed and it cannot be greater than 20 characters.</p>";
   }
   else {
     validFirstname = true;
@@ -35,7 +35,7 @@ function validateForm(){
       !Lastname.match(letters) ||
       Lastname.length > 50) 
   {
-    errorMessages = errorMessages + "<p> Last Name is required and cannot be greater than 50 characters. </p>";
+    errorMessages = errorMessages + "<p> Last Name is required, only letters are allowed and cannot be greater than 50 characters. </p>";
   }
   else {
     validLastname = true;
