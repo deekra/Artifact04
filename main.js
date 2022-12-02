@@ -227,7 +227,7 @@ function validateZipcode()
   
  document.getElementById("errorMessages").innerHTML = errorMessages;
  return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validState && validCountry && validZipcode);
-
 */
- return (validFirstname);
+  document.getElementById("errorMessages").innerHTML = errorMessages;
+ return (validFirstname());
 }
