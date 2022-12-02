@@ -88,8 +88,19 @@ function validateForm(){
   else {
     validCity = true;
   } 
+ 
+ var Country = document.getElementById("country").value;
+  if (Country === "null" ||
+      Country === "") {
+    
+    errorMessages = errorMessages +  "<p> Country is required.</p>";
+  
+  }
+  else {
+    validCountry = true;
+  } 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername && validPassword && validCity);
+ return (validFirstname && validLastname && validPhone && validUsername && validPassword && validCity && validCountry);
 
 }
