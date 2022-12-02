@@ -49,6 +49,8 @@ function validateForm(){
   }
   else {
     validEmail = true;
+   
+  }
   
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
