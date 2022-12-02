@@ -42,17 +42,10 @@ function validateForm(){
   } 
  
  var Email = document.getElementById("email").value;
-  var atpos = Email.indexOf("@");
-  var dotpos = Email.lastIndexOf(".");
   if ( Email === "null" ||
-      Email === "" ||
-      atpos< 1 ||
-      dotpos<atpos+2 ||
-      dotpos+2>=Email.length )
+      Email === "" ||)
   {
-    
-    errorMessages = errorMessages +  "<p> Email is not valid. </p>";
-  
+    errorMessages = errorMessages +  "<p> Email is not valid. </p>";  
   }
   else {
     validEmail = true;
