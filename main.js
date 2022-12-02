@@ -41,19 +41,20 @@ function validateForm(){
     validLastname = true;
   } 
  
- var Email = document.getElementById("email").value;
-  if ( Email === "null" ||
-      Email === "" ||)
-  {
-    errorMessages = errorMessages +  "<p> Email is not valid. </p>";  
+ var Phone = document.getElementById("phone").value;
+  if (Phone === "null" ||
+      Phone === "" ||
+      !Phone.match(numbers) ||
+      Phone.length > 15) {
+    
+    errorMessages = errorMessages +  "<p> Phone number is not valid.</p>";
+  
   }
   else {
-    validEmail = true;
-   
-  }
-  
+    validPhone = true;
+  } 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validEmail);
+ return (validFirstname && validLastname && validPhone);
 
 }
