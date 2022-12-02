@@ -40,9 +40,25 @@ function validateForm(){
   else {
     validLastname = true;
   } 
+ 
+ var Email = document.getElementById("email").value;
+  var atpos = Email.indexOf("@");
+  var dotpos = Email.lastIndexOf(".");
+  if ( Email === "null" ||
+      Email === "" ||
+      atpos< 1 ||
+      dotpos<atpos+2 ||
+      dotpos+2>=Email.length )
+  {
+    
+    errorMessages = errorMessages +  "<p> Email is not valid. </p>";
+  
+  }
+  else {
+    validEmail = true;
   
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname);
+ return (validFirstname && validLastname && validEmail);
 
 }
