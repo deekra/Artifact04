@@ -41,6 +41,17 @@ function validateForm(){
     validLastname = true;
   } 
  
+ var Email = document.getElementById("email").value;
+var atpos = Email.indexOf("@");
+var dotpos = Email.lastIndexOf(".");
+if (Email === null || Email ==="" || atpos< 1 || dotpos<atpos+2 || dotpos+2>=Email.length)
+{  
+    errorMessages = errorMessages +  "<p> Email is not valid. </p>";
+  }
+  else {
+    validEmail = true;
+  } 
+ 
  var Phone = document.getElementById("phone").value;
   if (Phone === "null" ||
       Phone === "" ||
@@ -112,6 +123,6 @@ function validateForm(){
   } 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername && validPassword && validAddress && validCity && validCountry);
+ return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validCountry);
 
 }
