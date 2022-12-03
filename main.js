@@ -111,6 +111,17 @@ if (Email === null || Email ==="" || atpos< 1 || dotpos<atpos+2 || dotpos+2>=Ema
     validCity = true;
   } 
  
+ var State = document.getElementById("state").value;
+  if (State === "null" ||
+      State === "") {
+    
+    errorMessages = errorMessages +  "<p> State is required.</p>";
+  
+  }
+  else {
+    validState = true;
+  } 
+ 
  var Country = document.getElementById("country").value;
   if (Country === "null" ||
       Country === "") {
@@ -122,7 +133,23 @@ if (Email === null || Email ==="" || atpos< 1 || dotpos<atpos+2 || dotpos+2>=Ema
     validCountry = true;
   } 
   
+ /* var Zipcode = document.getElementById("zipcode").value;
+  var Country = document.getElementById("country").value;
+  if ( Country === "USA" 
+       Zipcode === "null" 
+       Zipcode === "" 
+       Zipcode.length > 5) 
+  
+  {
+    
+    errorMessages = errorMessages +  "<p> Zipcode is required if country is USA and it cannot be greater than 5 characters .</p>";
+  
+  }
+  else {
+    validZipcode = true;
+  }  */
+ 
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validCountry);
+ return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validState && validCountry && validZipcode);
 
 }
