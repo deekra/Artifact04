@@ -78,6 +78,17 @@ function validateForm(){
     validPassword = true;
   } 
  
+  var Address = document.getElementById("address").value;
+  if (Address === "null" ||
+      Address === "")
+  {
+    errorMessages = errorMessages +  "<p> Address is required.</p>";
+  }
+  else {
+    validAddress = true;
+  } 
+ 
+ 
  var City = document.getElementById("city").value;
   if (City === "null" ||
       City === "") {
@@ -101,6 +112,6 @@ function validateForm(){
   } 
   
   document.getElementById("errorMessages").innerHTML = errorMessages;
- return (validFirstname && validLastname && validPhone && validUsername && validPassword && validCity && validCountry);
+ return (validFirstname && validLastname && validPhone && validUsername && validPassword && validAddress && validCity && validCountry);
 
 }
